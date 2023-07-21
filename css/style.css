@@ -8,6 +8,8 @@
   --light-white: #ecf0f1;
   --silver: #bdc3c7;
 
+  --box-size: 900px;
+
   --bg-color: var(--light-white);
   --text-color: var(--midnight-blue);
   --body-color: white;
@@ -38,15 +40,18 @@ body {
   clear: both;
 }
 
-/* Nav */
-header {
+/* General */
+header,
+main {
   background-color: var(--bg-color);
   min-height: 20px;
   padding: 20px 0;
+  margin-bottom: 20px;
 }
 
+/* Nav */
 header > nav {
-  width: 800px;
+  width: var(--box-size);
   margin: 0 auto;
 }
 
@@ -86,4 +91,50 @@ header > nav > ul > li:last-child > a:hover {
   background-color: var(--dark-blue);
   color: var(--bg-color);
   border-radius: 6px;
+}
+
+/* Main */
+main {
+  width: var(--box-size);
+  margin: 0 auto;
+  min-height: 600px;
+  border: 1px solid --silver;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+/* Aside */
+aside,
+section {
+  float: left;
+}
+
+aside {
+  width: 30%;
+  padding: 20px;
+}
+
+aside > ul {
+  list-style: none;
+}
+
+aside > ul > li {
+  margin-bottom: 10px;
+}
+
+aside > ul > li > a {
+  color: var(--link-color);
+  padding: 6px 10px;
+  display: block;
+}
+
+aside > ul > li > a:hover {
+  color: var(--text-color);
+  background-color: var(--midnight-blue);
+  border-radius: 5px;
+}
+
+/* Section */
+section {
+  width: 70%;
 }
